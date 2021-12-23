@@ -1,4 +1,4 @@
-//Channel especific
+//Npm search
 //Exemplo: !npm <package>
 //Linguagem usada: js
 //Author: aquelemesmoojack#4306
