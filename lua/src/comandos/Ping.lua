@@ -1,4 +1,7 @@
-local discordia = require('discordia')
+//Ping command
+//Exemplo: !ping
+//Linguagem usada: lua
+//Author: aquelemesmoojack#4306
 
 return {
     name = 'ping',
