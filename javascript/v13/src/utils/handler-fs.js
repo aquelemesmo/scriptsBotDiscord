@@ -3,7 +3,7 @@
 
 //Usando infinitos fs.readdir para ler todos os arquivos do diretorio sem aliases
 
-const fs = require('fs');
+const fs = require('node:fs');
 
 fs.readdir("./pasta/arquivo", (err, files) => {
     if(err) console.error(err);
