@@ -1,3 +1,1 @@
-Todos ou quase os scripts foram feitos pelo aquelemesmoojack#4306, caso aconteça algum erro de digitação e erro no código.
-
-Reporte esse erro para que ele possa arrumar.
+Todos ou quase todos os scripts foram programados por aquelemesmoojack#4306, caso ocorra algum erro de digitação e/ou erro no código reporte esse erro para que ele o possa corrigir.
