@@ -6,7 +6,7 @@
 const Discord = require("discord.js")
 
 module.exports.run = async (client,message,args) => {
-    const membro = message.mentions.members.first() || message.author;
+    const membro = message.mentions.members.first() || message.guild.members.get(args[0]) || message.author;
 
     const embed = new Discord.MessageEmbed()
     .setColor("RANDOM")

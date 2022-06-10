@@ -5,7 +5,7 @@
 
 const Discord = require("discord.js")
 
-module.exports.run = async (bot,message,args) => {
+module.exports.run = async (client,message,args) => {
     if(!message.member.permissions.has("KICK_MEMBERS")) {
         return message.reply(sua_mensagem_de_erro) //Se o membro não tiver permissão para usar o comando
     }
@@ -24,6 +24,6 @@ module.exports.run = async (bot,message,args) => {
     .setTitle("Usuário expulso")
     .setDescription(`${membro.user.tag} foi expulso por ${message.author.tag}`)
     .addField("> Motivo", motivo)
-    bot.channels.cache.get(canal_punicao).send({embeds: [kickEmbed]}) //se caso quer que envie em algum canal especifico
+    client.channels.cache.get(canal_punicao).send({embeds: [kickEmbed]}) //se caso quer que envie em algum canal especifico
     membro.kick(motivo) //Vai expulsar o membro mencionado e enviar o motivo
 }

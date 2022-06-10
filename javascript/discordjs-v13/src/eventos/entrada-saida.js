@@ -4,8 +4,10 @@
 
 //entrada para servidor de minecraft
 
+const db = require("quick.db")
+
 module.exports = async (client, member) => {
-    const embed = new MessageEmbed()
+    const embed = new Discord.MessageEmbed()
     .setColor(cor)
     .setTitle(`Seja bem-vindo(a) ${member.user.username} ao grupo!`)
     .setThumbnail(member.user.displayAvatarURL())
@@ -17,7 +19,7 @@ module.exports = async (client, member) => {
 //entrada para servidores comuns
 
 module.exports = async (client, member) => {
-    const embed = new MessageEmbed()
+    const embed = new Discord.MessageEmbed()
     .setColor(cor)
     .setTitle(`Seja bem-vindo(a) ${member.user.username} ao grupo!`)
     .setThumbnail(member.user.displayAvatarURL())
@@ -35,5 +37,25 @@ module.exports = async (client, member) => {
 //saida sem embed
 
 module.exports = async (client, member) => {
+    client.channels.cache.get(id_do_canal).send("Que pena, o usuário " + member.user.username + " saiu do grupo... tomará que volte")
+}
+
+//entrada com canal setado no setwelcome-quickdb.js
+
+module.exports = async (client, member) => {
+    let chx = db.get(`welchannel_${member.guild.id}`)
+
+    if(!chx) return
+
+    client.channels.cache.get(id_do_canal).send("Seja bem-vindo(a) " + member.user.username + " ao grupo!")
+}
+
+//entrada com canal setado no setleave-quickdb.js
+
+module.exports = async (client, member) => {
+    let chx = db.get(`leavechannel_${member.guild.id}`)
+
+    if(!chx) return
+
     client.channels.cache.get(id_do_canal).send("Que pena, o usuário " + member.user.username + " saiu do grupo... tomará que volte")
 }
