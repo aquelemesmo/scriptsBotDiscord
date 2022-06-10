@@ -5,7 +5,7 @@
 
 const Discord = require("discord.js")
 
-module.exports.run = async (bot,message,args) => {
+module.exports.run = async (client,message,args) => {
     if(!message.member.permissions.has("BAN_MEMBERS")) {
         return message.reply(sua_mensagem_de_erro) //Se o membro não tiver permissão para usar o comando
     }
@@ -24,6 +24,6 @@ module.exports.run = async (bot,message,args) => {
     .setTitle("Usuário banido")
     .setDescription(`${membro.user.tag} foi banido por ${message.author.tag}`)
     .addField("> Motivo", motivo)
-    bot.channels.cache.get(canal_punicao).send({embeds: [banEmbed]}) //se caso quer que envie em algum canal especifico
+    client.channels.cache.get(canal_punicao).send({embeds: [banEmbed]}) //se caso quer que envie em algum canal especifico
     membro.ban(motivo) //Vai banir o membro mencionado e enviar o motivo
 }
