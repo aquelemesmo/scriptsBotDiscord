@@ -1,7 +1,8 @@
-//Event welcome system
-//Exemplo: !saldo
+//Command setwelcome
+//Exemplo: !setwelcome <#canal>
 //Linguagem usada: js
 //Author: aquelemesmoojack#4306
+//Versão: Discord.JS v13
 
 const db = require("quick.db")
 

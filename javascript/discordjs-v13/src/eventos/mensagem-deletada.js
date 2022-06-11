@@ -4,13 +4,13 @@
 
 // mensagem deletada sem markdown
 
-const { MessageEmbed } = require("discord.js")
+const Discord = require("discord.js")
 
 module.exports = async (client, message) => {
 	if(message.author.client || message.author.id === client.user.id) return;
 	if(message.author.client) return;
 
-	const embed = new MessageEmbed()
+	const embed = new Discord.MessageEmbed()
 	.setColor("RANDOM")
     .setTitle("Mensagem de texto deletada!")
     .addFields(
@@ -22,13 +22,11 @@ module.exports = async (client, message) => {
 
 // mensagem deletada com markdown
 
-const { MessageEmbed } = require("discord.js")
-
 module.exports = async (client, message) => {
 	if(message.author.client || message.author.id === client.user.id) return;
 	if(message.author.client) return;
 
-	const embed = new MessageEmbed()
+	const embed = new Discord.MessageEmbed()
 	.setColor("RANDOM")
     .setTitle("Mensagem de texto deletada!")
     .addFields(

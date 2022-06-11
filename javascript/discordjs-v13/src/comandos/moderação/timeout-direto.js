@@ -2,6 +2,7 @@
 //Exemplo: !timeout <@user> <tempo> <motivo>
 //Linguagem usada: js
 //Author: aquelemesmoojack#4306
+//Versão: Discord.JS v13
 
 const ms = require("ms") //npm i --save ms
 
