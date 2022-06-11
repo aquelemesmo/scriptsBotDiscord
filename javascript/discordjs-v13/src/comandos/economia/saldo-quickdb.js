@@ -2,6 +2,7 @@
 //Exemplo: !saldo
 //Linguagem usada: js
 //Author: aquelemesmoojack#4306
+//Versão: Discord.JS v13
 
 //comando que nao precisa mencionar outro usuario para ver o saldo
 

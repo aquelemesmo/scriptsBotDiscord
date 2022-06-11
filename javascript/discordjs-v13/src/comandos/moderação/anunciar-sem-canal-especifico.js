@@ -2,6 +2,7 @@
 //Exemplo: !anunciar <anuncio>
 //Linguagem usada: js
 //Author: aquelemesmoojack#4306
+//Versão: Discord.JS v13
 
 const Discord = require("discord.js")
 

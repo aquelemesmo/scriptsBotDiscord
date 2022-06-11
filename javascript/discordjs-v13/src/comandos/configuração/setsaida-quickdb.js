@@ -1,7 +1,8 @@
-//Event leave system
-//Exemplo: !saldo
+//Command setleave
+//Exemplo: !setsaida <#canal>
 //Linguagem usada: js
 //Author: aquelemesmoojack#4306
+//Versão: Discord.JS v13
 
 const db = require("quick.db")
 
