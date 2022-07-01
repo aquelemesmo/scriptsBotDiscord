@@ -11,6 +11,10 @@ module.exports.run = async (client, message, args) => {
     const membro = message.author;
     let random = Math.floor(Math.random() * quantidade) //nesse "quantidade" voce pode por qualquer numero que ira ser gerado aleatorio no maximo daquele numero
     let work = await db.fetch(`work_${message.guild.id}_${membro.id}`)
+    let cooldown = Math.floor(Math.random() * 1500)
+
+    //cooldown
+    
     
     const embed = new Discord.MessageEmbed()
     .setTitle("Sucesso!")

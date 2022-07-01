@@ -1,0 +1,1 @@
+console.log("This is a bot in TypeScript!") //eu escrevi pq tava sem ideiakkk e pra ficar nada vazio :/

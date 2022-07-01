@@ -1,15 +1,15 @@
 {
   "name": "scripts",
-  "version": "1.0.0",
-  "description": "",
-  "main": "guildMemberAdd.js",
+  "version": "2.0.0",
+  "description": "1.2.1",
+  "main": "Main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "aquelemesmoojack#4306",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^13.7.0"
+    "discord.js": "^13.8.1"
   }
 }
