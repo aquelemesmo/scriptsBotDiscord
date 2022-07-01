@@ -8,7 +8,6 @@
 
 const Discord = require("discord.js")
 const db = require("quick.db")
-const ms = require("parse-ms") //npm i --save parse-ms
 
 module.exports.run = async (client, message, args) => {
     let coins = await db.fetch(`moedas_${message.guild.id}_${message.author.id}`) ?? 0 //ou seja, se nao tiver nada na db, ele vai ser 0
@@ -34,11 +33,9 @@ module.exports.run = async (client, message, args) => {
 
     if(!membro) return message.reply("Mencione um usuário válido!")
 
-    let coins = await db.fetch(`moedas_${message.guild.id}_${membro.id}`)
-    if(coins === null) coins = 0; //ou seja, se nao tiver nada na db, ele vai ser 0
+    let coins = await db.fetch(`moedas_${message.guild.id}_${membro.id}`) ?? 0//ou seja, se nao tiver nada na db, ele vai ser 0
 
-    let banco = await db.fetch(`banco_${message.guild.id}_${membro.id}`)
-    if(banco === null) banco = 0;
+    let banco = await db.fetch(`banco_${message.guild.id}_${membro.id}`) ?? 0
 
     const embed = new Discord.MessageEmbed()
     .setColor("RANDOM")

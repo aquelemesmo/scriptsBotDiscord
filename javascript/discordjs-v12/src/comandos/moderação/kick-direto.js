@@ -18,7 +18,7 @@ module.exports.run = async (client,message,args) => {
     const membro = message.mentions.members.first() || message.guild.members.get(args[0]) //Pega o membro mencionado ou o membro com o ID passado
     if(!membro) return message.reply("Você não mencionou nenhum membro!") //Se não mencionar nenhum membro, vai aparecer essa mensagem
 
-    const motivo = args.slice(1).join(" ") || "Sem motivo" //Pega o motivo do ban, se caso não estiver nada escrito vai aparecer esse "Sem motivo"
+    const motivo = args.slice(1).join(" ") ?? "Sem motivo" //Pega o motivo do ban, se caso não estiver nada escrito vai aparecer esse "Sem motivo"
 
     const kickEmbed = new Discord.MessageEmbed()
     .setColor("sua_cor")

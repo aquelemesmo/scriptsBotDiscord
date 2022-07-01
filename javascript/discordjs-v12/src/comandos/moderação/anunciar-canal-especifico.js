@@ -1,4 +1,4 @@
-//Channel not especific
+//Channel especific
 //Exemplo: !anunciar <anuncio>
 //Linguagem usada: js
 //Author: aquelemesmoojack#4306
@@ -15,16 +15,18 @@ module.exports.run = async (client, message, args) => {
 
     if(!sugestao) return message.reply(`Coloque alguma coisa para ser anunciado!`)
 
+    let channel = client.channels.cache.get("id_do_canal")
+
     const embed = new Discord.MessageEmbed()
     .setColor(sua_cor) //.setColor("sua_cor")
     .setTitle("seu_titulo")
     .setDescription(sugestao)
-    .setFooter({contet: "seu_rodape"})
+    .setFooter("seu_rodape")
     .setTimestamp()
-    message.channel.send({embeds: [embed]})
+    await channel.send({embeds: [embed]})
 }
 
-//Comando organizado e arrumado algumas coisas e adicionado reply
+//Comando organizado e arrumado algumas coisas
 
 const Discord = require("discord.js")
 
@@ -37,7 +39,7 @@ module.exports.run = async (client, message, args) => {
     .setColor(sua_cor) //.setColor("sua_cor")
     .setTitle("seu_titulo")
     .setDescription(args.join(" "))
-    .setFooter({content: "seu_rodape"})
+    .setFooter("seu_rodape")
     .setTimestamp()
-    message.reply({embeds: [embed]})
+    client.channels.cache.get("id_do_canal").send({embeds: [embed]})
 }

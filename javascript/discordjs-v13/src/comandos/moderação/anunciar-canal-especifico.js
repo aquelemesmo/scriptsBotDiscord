@@ -21,7 +21,7 @@ module.exports.run = async (client, message, args) => {
     .setColor(sua_cor) //.setColor("sua_cor")
     .setTitle("seu_titulo")
     .setDescription(sugestao)
-    .setFooter("seu_rodape")
+    .setFooter({contet: "seu_rodape"})
     .setTimestamp()
     await channel.send({embeds: [embed]})
 }
@@ -39,7 +39,7 @@ module.exports.run = async (client, message, args) => {
     .setColor(sua_cor) //.setColor("sua_cor")
     .setTitle("seu_titulo")
     .setDescription(args.join(" "))
-    .setFooter("seu_rodape")
+    .setFooter({content: "seu_rodape"})
     .setTimestamp()
     client.channels.cache.get("id_do_canal").send({embeds: [embed]})
 }

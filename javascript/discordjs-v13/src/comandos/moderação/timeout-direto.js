@@ -44,5 +44,6 @@ module.exports.run = async (bot,message,args) => {
     } else {
         membro.timeout(tempoEmMs, motivo)
         bot.channels.cache.get("id_do_canal").send({embeds: [embed]})
+        message.reply("Usuário punido com sucesso!")
     }
 }
