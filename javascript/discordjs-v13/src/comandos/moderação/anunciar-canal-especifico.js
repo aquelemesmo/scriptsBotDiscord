@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args) => {
     let channel = client.channels.cache.get("id_do_canal")
 
     const embed = new Discord.MessageEmbed()
-    .setColor(sua_cor) //.setColor("sua_cor")
+    .setColor("cor")
     .setTitle("seu_titulo")
     .setDescription(sugestao)
     .setFooter({contet: "seu_rodape"})

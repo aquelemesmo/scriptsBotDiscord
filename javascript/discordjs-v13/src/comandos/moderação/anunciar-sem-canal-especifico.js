@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) => {
     if(!sugestao) return message.reply(`Coloque alguma coisa para ser anunciado!`)
 
     const embed = new Discord.MessageEmbed()
-    .setColor(sua_cor) //.setColor("sua_cor")
+    .setColor("cor")
     .setTitle("seu_titulo")
     .setDescription(sugestao)
     .setFooter({contet: "seu_rodape"})

@@ -21,7 +21,7 @@ module.exports.run = async (client,message,args) => {
     const motivo = args.slice(1).join(" ") || "Sem motivo" //Pega o motivo do ban, se caso não estiver nada escrito vai aparecer esse "Sem motivo"
 
     const banEmbed = new Discord.MessageEmbed()
-    .setColor("sua_cor")
+    .setColor("cor")
     .setTitle("Usuário banido")
     .setDescription(`${membro.user.tag} foi banido por ${message.author.tag}`)
     .addField("> Motivo", motivo)

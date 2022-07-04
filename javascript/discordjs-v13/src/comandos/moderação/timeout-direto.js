@@ -17,14 +17,14 @@ module.exports.run = async (bot,message,args) => {
 
     if(args.length === 0) {
         const lengthEmbed = new MessageEmbed()
-        .setColor(sua_cor)
+        .setColor("cor")
         .setDescription("Use: `!timeout <usuário> <tempo> <motivo>`")
         return message.reply({embeds: [lengthEmbed]})
     }
 
     const membro = message.mentions.members.first()
     const tempo = args[1]
-    const motivo = args.slice(2).join(" ")
+    const motivo = args.slice(2).join(" ") || "Sem motivo"
     
     message.delete()
     
