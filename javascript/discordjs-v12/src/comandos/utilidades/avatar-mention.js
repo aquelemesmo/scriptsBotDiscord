@@ -2,7 +2,7 @@
 //Exemplo: !avatar <@usuario>
 //Linguagem usada: js
 //Author: aquelemesmoojack#4306
-//Versão: Discord.JS v13
+//Versão: Discord.JS v12
 
 const Discord = require("discord.js")
 
@@ -14,5 +14,5 @@ module.exports.run = async (client,message,args) => {
     .setTitle("Avatar de " + membro.user.username)
     .setDescription(`[Clique aqui para baixar](${membro.user.displayAvatarURL({dynamic: true, size: 4096, format: 'png'})}) o avatar`)
     .setImage(membro.user.displayAvatarURL({dynamic: true, size: 4096, format: 'png'}))
-    message.reply({embeds: [embed]})
+    message.quote({embeds: [embed]})
 }
