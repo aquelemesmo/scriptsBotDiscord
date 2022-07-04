@@ -5,6 +5,7 @@
 //Versão: Discord.JS v13
 
 const Discord = require("discord.js")
+const Command = require("../estruturas/comando")
 
 module.exports.run = async (client,message,args) => {
     if(!message.member.permissions.has("KICK_MEMBERS")) {
@@ -27,4 +28,54 @@ module.exports.run = async (client,message,args) => {
     .addField("> Motivo", motivo)
     client.channels.cache.get(canal_punicao).send({embeds: [kickEmbed]}) //se caso quer que envie em algum canal especifico
     membro.kick(motivo) //Vai expulsar o membro mencionado e enviar o motivo
+}
+
+//slashcommands
+
+module.exports = class extends Command {
+    constructor(client) {
+        super(client, {
+            name: 'kick',
+            description: 'Expulsar um usuário do servidor.',
+            options: [
+                {
+                    name: 'usuário',
+                    type: 'USER',
+                    description: 'Usuário a ser expulso.',
+                    required: true
+                },
+                {
+                    name: 'motivo',
+                    type: 'STRING',
+                    description: 'Motivo do kick.',
+                    required: false
+                }
+            ]
+        })
+    }
+
+    run = async (message) => {
+        if(!message.member.permissions.has("KICk_MEMBERS")) {
+            return message.reply(sua_mensagem_de_erro) //Se o membro não tiver permissão para usar o comando
+        }
+
+        if(!message.guild.me.permissions.has("KICk_MEMBERS")) {
+            return message.reply(sua_mensagem_de_erro) //Se o bot não tiver permissão para executar essa ação
+        }
+
+        const user = message.options.getUser('user')
+        if (message.user.id === user.id) return message.reply({ content: 'Você não pode se expulsar.', ephemeral: true })
+
+        const membro = message.guild.members.cache.get(user.id)
+
+        const motivo = message.options.getString('motivo') || 'Sem motivo'
+
+        if (message.guild.me.roles.highest.position <= membro.roles.highest.position) {
+            return message.reply({ content: 'Não consigo expulsar este usuário, o cargo dele não é mais baixo que o meu.', ephemeral: true })
+        } else {
+            membro.kic(motivo)
+            message.reply({content: `Usuário punido com sucesso!`, ephemeral: true})
+                .catch(() => message.reply({ content: 'Erro ao expulsar o usuário!', ephemeral: true }))
+        }
+    }
 }
