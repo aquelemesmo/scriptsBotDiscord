@@ -13,4 +13,15 @@ module.exports.run = async (bot, message, args) => {
     .setColor("RANDOM")
     .setTitle("Informações de " + membro.user.username)
     .setThumbnail(membro.user.displayAvatarURL({dynamic: true, size: 4096, format: 'png'}))
+    .setDescription(`
+        Nome: ${membro.user.username}
+        ID: ${membro.user.id}
+        Discriminator: ${membro.user.discriminator}
+        Status: ${membro.user.presence.status}
+        Jogando: ${membro.user.presence.game ? membro.user.presence.game.name : "Não está jogando nada"}
+        Criado em: ${membro.user.createdAt}
+        Entrou em: ${membro.joinedAt}
+        Cargo: ${membro.roles.map(r => r.name).join(', ') || "Nenhum"}
+    `)
+    message.reply({embeds: [embed]})
 }
