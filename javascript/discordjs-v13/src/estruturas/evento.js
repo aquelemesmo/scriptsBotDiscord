@@ -3,11 +3,10 @@
 //Author: Ihury (https://github.com/Ihury)
 //Versão: Discord.JS v13
 
-const Discord = require('discord.js')
 const { readdirSync } = require('fs')
 const { join } = require('path')
 
-module.exports = class extends Discord.Client {
+module.exports = class extends Client {
     constructor(options) {
         super(options)
 

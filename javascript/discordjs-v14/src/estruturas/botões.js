@@ -3,7 +3,7 @@
 //Linguagem usada: js
 //Author: aquelemesmoojack#4306
 
-const { ButtonStyles } = require("discord.js/typings/enums");
+const { ButtonStyle, ActionRowBuilder, ButtonBuiler } = require("discord.js");
 
 module.exports.run = async (bot,message,args) => {
     const row = new ActionRowBuilder()
