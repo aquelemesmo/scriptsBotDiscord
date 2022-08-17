@@ -5,6 +5,7 @@ return {
         'Ping'
     },
     Eventos = {
-        'ready'
+        'ready',
+        'messageCreate'
     }
 }
