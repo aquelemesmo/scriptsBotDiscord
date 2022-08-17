@@ -11,7 +11,7 @@ module.exports.run = async (bot,interaction) => {
     } else if(interaction.type === InteractionTypes.MessageComponent) {
         //seu código aqui
     } else if(interaction.type === InteractionTypes.ModalSubmit) {
-        //seu código aqui
+        //modals em discord.js/scripts/estruturas/modals.js
     } else if(interaction.type === InteractionTypes.ApplicationCommandAutoComplete) {
         //seu código aqui
     }
