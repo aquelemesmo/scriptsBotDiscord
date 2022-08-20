@@ -22,16 +22,17 @@ module.exports = {
   const button = new Discord.ActionRowBuilder()
         .addComponents(
           new Discord.ButtonBuilder()
-        .setLabel('Abrir avatar no navegador')
-        .setStyle(Discord.ButtonStyle.Link)
-        .setURL(user.displayAvatarURL({ dynamic: true, size: 4096}))
-                )
+          .setLabel('Abrir avatar no navegador')
+          .setStyle(Discord.ButtonStyle.Link)
+          .setURL(user.displayAvatarURL({ dynamic: true, size: 4096}))
+        )
+
         interaction.reply({ content: `${interaction.user}`, embeds: [new Discord.EmbedBuilder()
-        .setAuthor({ name: client.user.username, iconURL: client.user.displayAvatarURL({ dynamic: true })})
-        .setColor('00001')
-        .setDescription(`**{ 🖼 }** » Avatar de: \`${user.tag}\``)
-        .setImage(avatar)
-        .setFooter({ text: `Comando usado por ${interaction.user.tag}`, iconURL: interaction.user.displayAvatarURL({ dynamic: true })})
-        .setTimestamp()                                 ], components: [button]})
+          .setAuthor({ name: client.user.username, iconURL: client.user.displayAvatarURL({ dynamic: true })})
+          .setColor('00001')
+          .setDescription(`**{ 🖼 }** » Avatar de: \`${user.tag}\``)
+          .setImage(avatar)
+          .setFooter({ text: `Comando usado por ${interaction.user.tag}`, iconURL: interaction.user.displayAvatarURL({ dynamic: true })})
+          .setTimestamp()], components: [button]})
   }
 }

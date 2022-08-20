@@ -15,6 +15,12 @@ module.exports.run = async (bot, message, args) => {
         ID: ${message.guild.id}
         Criação: ${message.guild.createdAt}
         Dono: ${message.guild.owner}
+        Membros: ${message.guild.memberCount}
+        Cargos: ${message.guild.roles.cache.size}
+        Categorias: ${message.guild.channels.cache.filter(c => c.type === 'category').size}
+        Texto: ${message.guild.channels.cache.filter(c => c.type === 'text').size}
+        Voice: ${message.guild.channels.cache.filter(c => c.type === 'voice').size}
+        Emojis: ${message.guild.emojis.cache.size}
     `)
     message.reply({embeds: [embed]})
 }

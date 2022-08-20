@@ -2,21 +2,22 @@
 //Exemplo: !timeout <@user> <tempo> <motivo>
 //Linguagem usada: js
 //Author: aquelemesmoojack#4306
-//Versão: Discord.JS v13
+//Versão: Discord.JS v14
 
+const { EmbedBuilder } = require("discord.js")
 const ms = require("ms") //npm i --save ms
 
 module.exports.run = async (bot,message,args) => {
-    if(!message.member.permissions.has("MODERATE_MEMBERS")) {
+    if(!message.member.permissions.has("BAN_MEMBERS")) {
         return message.reply(sua_mensagem_de_erro) //Se o membro não tiver permissão para usar o comando
     }
 
-    if(!message.guild.me.permissions.has("MODERATE_MEMBERS")) {
+    if(!message.guild.me.permissions.has("BAN_MEMBERS")) {
         return message.reply(sua_mensagem_de_erro) //Se o bot não tiver permissão para executar essa ação
     }
 
     if(args.length === 0) {
-        const lengthEmbed = new MessageEmbed()
+        const lengthEmbed = new EmbedBuilder()
         .setColor("cor")
         .setDescription("Use: `!timeout <usuário> <tempo> <motivo>`")
         return message.reply({embeds: [lengthEmbed]})
@@ -30,7 +31,7 @@ module.exports.run = async (bot,message,args) => {
     
     const tempoEmMs = ms(tempo)    
    
-    const embed = new MessageEmbed()
+    const embed = new EmbedBuilder()
     .setThumbnail(message.author.displayAvatarURL())
     .setColor(sua_cor)
     .addFields(
