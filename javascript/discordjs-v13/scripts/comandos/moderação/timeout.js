@@ -4,14 +4,15 @@
 //Author: aquelemesmoojack#4306
 //Versão: Discord.JS v13
 
+const Discord = require("discord.js")
 const ms = require("ms") //npm i --save ms
 
 module.exports.run = async (bot,message,args) => {
-    if(!message.member.permissions.has("BAN_MEMBERS")) {
+    if(!message.member.permissions.has("MODERATE_MEMBERS")) {
         return message.reply(sua_mensagem_de_erro) //Se o membro não tiver permissão para usar o comando
     }
 
-    if(!message.guild.me.permissions.has("BAN_MEMBERS")) {
+    if(!message.guild.me.permissions.has("MODERATE_MEMBERS")) {
         return message.reply(sua_mensagem_de_erro) //Se o bot não tiver permissão para executar essa ação
     }
 
@@ -30,7 +31,7 @@ module.exports.run = async (bot,message,args) => {
     
     const tempoEmMs = ms(tempo)    
    
-    const embed = new MessageEmbed()
+    const embed = new Discord.MessageEmbed()
     .setThumbnail(message.author.displayAvatarURL())
     .setColor(sua_cor)
     .addFields(

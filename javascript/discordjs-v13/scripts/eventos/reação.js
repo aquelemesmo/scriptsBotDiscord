@@ -1,6 +1,7 @@
 //Para poder usar esse script e fazer funcionar, tera que usar o evento messageReactionAdd e messageReactionRemove
 //Linguagem usada: js
 //Author: aquelemesmoojack#4306
+//Versão: Discord.JS v13
 
 module.exports = async (bot, message, reaction) => {
     if(reaction.emoji.name === "seu_emoji") {

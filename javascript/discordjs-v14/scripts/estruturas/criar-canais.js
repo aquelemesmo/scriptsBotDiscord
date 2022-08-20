@@ -56,3 +56,28 @@ const canal2 = await message.guilds.channel.create({
         }
     ]
 })
+
+//categoria
+
+const canal3 = await message.guilds.channel.create({
+    name: 'texto',
+    type: ChannelType.GuildCategory,
+    permissionOverwrites: [
+        {
+            id: bot.user.id,
+            allow: [PermissionsBitField.Flags.ViewChannel, PermissionsBitField.Flags.SendMessages]
+        },
+        {
+            id: message.guild.id, //interaction.guild.id
+            deny: [PermissionsBitField.Flags.ViewChannel, PermissionsBitField.Flags.SendMessages]
+        },
+        {
+            id: message.user.id, //interaction.user.id
+            allow: [PermissionsBitField.Flags.ViewChannel, PermissionsBitField.Flags.SendMessages]
+        },
+        {
+            id: 'id_role_staff',
+            allow: [PermissionsBitField.Flags.ViewChannel, PermissionsBitField.Flags.SendMessages]
+        }
+    ]
+})

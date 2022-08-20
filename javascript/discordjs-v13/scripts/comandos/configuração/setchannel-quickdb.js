@@ -1,5 +1,5 @@
-//Command setwelcome
-//Exemplo: !setwelcome <#canal>
+//Command setchannel
+//Exemplo: !setchannel <#canal>
 //Linguagem usada: js
 //Author: aquelemesmoojack#4306
 //Versão: Discord.JS v13
@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
 
     if(!channel) return message.reply("Você precisa mencionar um canal")
     
-    db.set(`welchannel_${message.guild.id}`, channel.id)
+    db.set(`channel_${message.guild.id}`, channel.id)
 
-    message.reply("O canal" + channel + " foi setado como canal de entrada!")
+    message.reply("O canal " + channel + " foi setado como canal de entrada!")
 }

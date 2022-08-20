@@ -32,7 +32,10 @@ const client = new Client({
         Partials.Reaction,
         Partials.ThreadMember,
         Partials.User
-    ]
+    ],
+    ws: {
+        browser: "Discord iOS" //irá deixar o status do bot para celular
+    }
 })
 
 client.login("token")
