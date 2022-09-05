@@ -4,15 +4,15 @@
 //Author: aquelemesmoojack#4306
 //Versão: Discord.JS v14
 
-const { EmbedBuilder, ApplicationCommandType } = require("discord.js")
+const { EmbedBuilder, ApplicationCommandType, PermissionsBitField, ApplicationCommandOptionType } = require("discord.js")
 const Command = require("../estruturas/comando")
 
 module.exports.run = async (client,message,args) => {
-    if(!message.member.permissions.has("KICK_MEMBERS")) {
+    if(!message.member.permissions.has(PermissionsBitField.Flags.KickMembers)) {
         return message.reply(sua_mensagem_de_erro) //Se o membro não tiver permissão para usar o comando
     }
 
-    if(!message.guild.me.permissions.has("KICK_MEMBERS")) {
+    if(!message.guild.me.permissions.has(PermissionsBitField.Flags.KickMembers)) {
         return message.reply(sua_mensagem_de_erro) //Se o bot não tiver permissão para executar essa ação
     }
 
@@ -41,13 +41,13 @@ module.exports = class extends Command {
             options: [
                 {
                     name: 'usuário',
-                    type: 'USER',
+                    type:  ApplicationCommandOptionType.User,
                     description: 'Usuário a ser expulso.',
                     required: true
                 },
                 {
                     name: 'motivo',
-                    type: 'STRING',
+                    type:  ApplicationCommandOptionType.String,
                     description: 'Motivo do kick.',
                     required: false
                 }
@@ -56,11 +56,11 @@ module.exports = class extends Command {
     }
 
     run = async (message) => {
-        if(!message.member.permissions.has("KICk_MEMBERS")) {
+        if(!message.member.permissions.has(PermissionsBitField.Flags.KickMembers)) {
             return message.reply(sua_mensagem_de_erro) //Se o membro não tiver permissão para usar o comando
         }
 
-        if(!message.guild.me.permissions.has("KICk_MEMBERS")) {
+        if(!message.guild.me.permissions.has(PermissionsBitField.Flags.KickMembers)) {
             return message.reply(sua_mensagem_de_erro) //Se o bot não tiver permissão para executar essa ação
         }
 

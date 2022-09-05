@@ -1,0 +1,11 @@
+- Atualizações `discord.js-v11`:
+> Criado novas sources `ban.js` e `kick.js`
+
+- Atualizações `discord.js-v12`:
+> Criado nova source `mute.js`
+
+- Atualizações `discord.js-v14`:
+> Atualizado a categoria `moderação`
+> Criado nova source `userinfo.js`, `sugestão.js` e `temperatura.js`
+> Atualizado o evento `entrada-saida.js` e `interação.js`
+> Criado novo evento `mensagem.js`

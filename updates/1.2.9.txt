@@ -1,0 +1,23 @@
+- Atualização discordjs-v13:
+> Deletado a source `setsaida-quickdb.js` em `configuração`
+> Renomeado `setwelcome-quickdb.js` para `setchannel-quickdb.js`
+> Arrumado bug do `timeout.js`
+> Deletado a source `timeout-direto.js` em `moderação`
+> Adicionado 6 novos métodos no `server-informações.js` em `utilidades`
+> Removido a mensagem de saída do evento `entrada-saida.js`
+> Alterações em `interação.js` em `evento`
+> Adicionado mais 2 novas interaction no `evento` `interação.js`
+
+- Atualização discordjs-v14:
+> Todos os comandos `SlashCommands` agora tem um `type: ApplicationCommandType.ChatInput`
+> Criado novo método em `criar-canais.js`
+> Atualizado o `client.js` em `estruturas`
+> Criado novo arquivo `md/cores.md`
+> Organizado a source `ping.js, avatar.js` e `servericon.js`
+
+- Atualização java:
+> Criado nova source `ban.java & ping.java`
+> Renomeado o arquivo `src` para `scripts`
+
+- Atualização lua:
+> Adicionado nova source `Ban.lua`
