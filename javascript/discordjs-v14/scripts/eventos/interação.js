@@ -5,7 +5,7 @@
 
 const { InteractionTypes } = require("discord.js")
 
-module.exports.run = async (bot,interaction) => {
+module.exports = async (bot,interaction) => {
     if(interaction.type === InteractionTypes.ApplicationCommand) {
         //seu código aqui
     } else if(interaction.type === InteractionTypes.MessageComponent) {

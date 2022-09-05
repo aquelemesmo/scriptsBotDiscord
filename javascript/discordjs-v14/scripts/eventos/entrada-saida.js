@@ -45,7 +45,7 @@ module.exports = async (client, member) => {
 //entrada com canal setado no setwelcome-quickdb.js
 
 module.exports = async (client, member) => {
-    let chx = db.get(`welchannel_${member.guild.id}`)
+    let chx = db.get(`welchannel.${member.guild.id}`)
 
     if(!chx) return
 
@@ -55,7 +55,7 @@ module.exports = async (client, member) => {
 //entrada com canal setado no setleave-quickdb.js
 
 module.exports = async (client, member) => {
-    let chx = db.get(`leavechannel_${member.guild.id}`)
+    let chx = db.get(`leavechannel.${member.guild.id}`)
 
     if(!chx) return
 

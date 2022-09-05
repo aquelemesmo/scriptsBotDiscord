@@ -4,15 +4,15 @@
 //Author: aquelemesmoojack#4306
 //Versão: Discord.JS v14
 
-const { EmbedBuilder } = require("discord.js")
+const { EmbedBuilder, PermissionsBitField } = require("discord.js")
 const ms = require("ms") //npm i --save ms
 
 module.exports.run = async (bot,message,args) => {
-    if(!message.member.permissions.has("BAN_MEMBERS")) {
+    if(!message.member.permissions.has(PermissionsBitField.Flags.ModerateMembers)) {
         return message.reply(sua_mensagem_de_erro) //Se o membro não tiver permissão para usar o comando
     }
 
-    if(!message.guild.me.permissions.has("BAN_MEMBERS")) {
+    if(!message.guild.me.permissions.has(PermissionsBitField.Flags.ModerateMembers)) {
         return message.reply(sua_mensagem_de_erro) //Se o bot não tiver permissão para executar essa ação
     }
 

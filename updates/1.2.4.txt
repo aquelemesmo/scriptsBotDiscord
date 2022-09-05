@@ -1,0 +1,3 @@
+- Atualização discordjs-v13:
+	- Atualizado `ban-direto.js` e `kick-direto.js`
+	- Criado novas sources `client-slashcommands.js, comando.js e evento.js` em `estruturas`

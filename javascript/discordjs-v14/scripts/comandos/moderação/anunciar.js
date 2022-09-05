@@ -7,7 +7,7 @@
 const { EmbedBuilder } = require("discord.js")
 
 module.exports.run = async (client, message, args) => {
-    if(!message.member.permissions.has("MANAGE_MESSAGES")) {
+    if(!message.member.permissions.has(Discord.PermissionsBitField.Flags.ManageMessages)) {
         return message.reply(sua_mensagem_de_erro) //Se o membro não tiver permissão para usar o comando
     }
 
@@ -29,7 +29,7 @@ module.exports.run = async (client, message, args) => {
 //Comando organizado e arrumado algumas coisas
 
 module.exports.run = async (client, message, args) => {
-    if(!message.member.permissions.has("MANAGE_MESSAGES")) return message.reply(sua_mensagem_de_erro)
+    if(!message.member.permissions.has(Discord.PermissionsBitField.Flags.ManageMessages)) return message.reply(sua_mensagem_de_erro)
 
     if(!args.join(" ")) return message.reply(`Coloque alguma coisa para ser anunciado!`)
 
@@ -45,7 +45,7 @@ module.exports.run = async (client, message, args) => {
 //anunciar sem canal especifico
 
 module.exports.run = async (client, message, args) => {
-    if(!message.member.permissions.has("MANAGE_MESSAGES")) {
+    if(!message.member.permissions.has(Discord.PermissionsBitField.Flags.ManageMessages)) {
         return message.reply(sua_mensagem_de_erro) //Se o membro não tiver permissão para usar o comando
     }
 
@@ -67,7 +67,7 @@ module.exports.run = async (client, message, args) => {
 const Discord = require("discord.js")
 
 module.exports.run = async (client, message, args) => {
-    if(!message.member.permissions.has("MANAGE_MESSAGES")) return message.reply(sua_mensagem_de_erro)
+    if(!message.member.permissions.has(Discord.PermissionsBitField.Flags.ManageMessages)) return message.reply(sua_mensagem_de_erro)
 
     if(!args.join(" ")) return message.reply(`Coloque alguma coisa para ser anunciado!`)
 

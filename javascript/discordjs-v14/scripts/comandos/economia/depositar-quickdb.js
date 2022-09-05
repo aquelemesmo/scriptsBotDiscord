@@ -18,8 +18,8 @@ module.exports.run = async (client, message, args) => {
     .setColor("cor")
     .setDescription("Todo o seu dinheiro foi depositado para o banco!")
     message.reply({embeds: [embed]})
-    db.subtract(`moedas_${message.guild.id}_${message.author.id}`, coins)
-    db.add(`banco_${message.guild.id}_${message.author.id}`, coins)
+    db.subtract(`moedas.${message.guild.id}.${message.author.id}`, coins)
+    db.add(`banco.${message.guild.id}.${message.author.id}`, coins)
 }
 
 //depositar qualquer quantia de moedas
