@@ -1,5 +1,5 @@
 //Command ping
-//Exemplo: !ping
+//Exemplo: /ping
 //Linguagem usada: js
 //Author: Aubrey#2981 <Ferinha:
 //Versão: Discord.JS v14

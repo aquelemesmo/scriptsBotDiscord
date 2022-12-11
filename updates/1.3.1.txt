@@ -1,0 +1,8 @@
+- Atualizações `discord.js-v14`:
+> Criado 3 novos arquivos `prefix`, `slashcommands` e `utils`
+> Os arquivos que estão na pasta `utils` estão os `eventos`, `estruturas` e `json`
+> Deletado a source `economia`
+> Atualizado `banir.js` e `expulsar.js`
+
+- Atualizações `scriptBotDiscord`:
+> Deletado `Main.js` e `config.json`

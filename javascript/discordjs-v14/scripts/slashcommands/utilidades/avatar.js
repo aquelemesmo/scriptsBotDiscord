@@ -1,5 +1,5 @@
 //Command avatar
-//Exemplo: !avatar <usuário>
+//Exemplo: /avatar <usuário>
 //Linguagem usada: js
 //Author: David Dev#0001
 //Versão: Discord.JS v14
@@ -14,12 +14,12 @@ module.exports = {
     name: 'user',
     description: 'User que desejar ver o avatar',
     type: 6,
-    required:false,
+    required: false,
   }],
   run: async (client,interaction) => {
-  const user = interaction.options.getUser('user') || interaction.user
-  const avatar = user.displayAvatarURL({ dynamic: true, size: 4096 })
-  const button = new Discord.ActionRowBuilder()
+    const user = interaction.options.getUser('user') || interaction.user
+    const avatar = user.displayAvatarURL({ dynamic: true, size: 4096 })
+        const button = new Discord.ActionRowBuilder()
         .addComponents(
           new Discord.ButtonBuilder()
           .setLabel('Abrir avatar no navegador')
