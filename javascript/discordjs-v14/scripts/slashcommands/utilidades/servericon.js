@@ -1,5 +1,5 @@
 //Command servericon
-//Exemplo: !servericon
+//Exemplo: /servericon
 //Linguagem usada: js
 //Author: David zsl#0001
 //Versão: Discord.JS v14
