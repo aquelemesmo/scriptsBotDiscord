@@ -26,7 +26,7 @@ module.exports = {
     ],
     run: async (client, interaction) => {
         if(interaction.member.permission.has(PermissionBitField.Flags.KickMembers)) {
-            const membro = interaction.options.getUser("membro")
+            const membro = interaction.guild.members.cache.get(interaction.options.getUser("membro").id)
             const motivo = interaction.options.getString("motivo")
 
             interaction.reply({content: "Membro expulso com sucesso", ephemeral: true})

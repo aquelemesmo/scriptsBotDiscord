@@ -41,7 +41,7 @@ const row2 = new Discord.MessageActionRow()
     const filtro = m => m.customId === "id_do_botao" && m.user.id === message.author.id;
     const collector = message.channel.createMessageComponentCollector(filtro);
 
-    collector.on("collect", m => {
+    collector.on("collect", async m => {
         if(m.customId === "id_do_botao") {
             //aqui você pode fazer algo com o botão
             await m.editReply() //se você quiser editar o botão, use o m.editReply()

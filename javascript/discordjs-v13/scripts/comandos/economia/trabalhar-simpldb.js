@@ -5,13 +5,13 @@
 //Versão: Discord.JS v13
 
 const Discord = require("discord.js")
-const { QuickDB } = require("quick.db")
-const db = new QuickDB() //npm i --save quick.db
+const SimplDB = require("simpl.db")
+const db = new SimplDB() //npm i --save simpl.db
 
 module.exports.run = async (client, message, args) => {
     const membro = message.author;
     let random = Math.floor(Math.random() * quantidade) //nesse "quantidade" voce pode por qualquer numero que ira ser gerado aleatorio no maximo daquele numero
-    let work = await db.fetch(`work.${message.guild.id}.${membro.id}`)
+    let work = db.fetch(`work.${message.guild.id}.${membro.id}`)
     let cooldown = Math.floor(Math.random() * 1500)
 
     //cooldown

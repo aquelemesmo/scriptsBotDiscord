@@ -17,7 +17,7 @@ module.exports = {
     required: false,
   }],
   run: async (client,interaction) => {
-    const user = interaction.options.getUser('user') || interaction.user
+    const user = interaction.guild.members.cache.get(interaction.options.getUser("membro").id) || interaction.user
     const avatar = user.displayAvatarURL({ dynamic: true, size: 4096 })
         const button = new Discord.ActionRowBuilder()
         .addComponents(
