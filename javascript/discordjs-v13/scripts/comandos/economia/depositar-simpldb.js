@@ -7,8 +7,8 @@
 //depositar todo o dinheiro, depall
 
 const Discord = require("discord.js")
-const { QuickDB } = require("quick.db")
-const db = new QuickDB()
+const SimplDB = require("simpl.db")
+const db = new SimplDB()
 
 module.exports.run = async (client, message, args) => {
     let coins = await db.fetch(`moedas.${message.guild.id}.${message.author.id}`) ?? 0
@@ -19,13 +19,14 @@ module.exports.run = async (client, message, args) => {
     .setColor("cor")
     .setDescription("Todo o seu dinheiro foi depositado para o banco!")
     message.reply({embeds: [embed]})
-    db.subtract(`moedas.${message.guild.id}_${message.author.id}`, coins)
+    db.subtract(`moedas.${message.guild.id}.${message.author.id}`, coins)
     db.add(`banco.${message.guild.id}.${message.author.id}`, coins)
 }
 
 //depositar qualquer quantia de moedas
 
 const Discord = require("discord.js")
+const db = require("quick.db")
 
 module.exports.run = async (client, message, args) => {
     let coins = await db.fetch(`moedas.${message.guild.id}.${message.author.id}`) ?? 0

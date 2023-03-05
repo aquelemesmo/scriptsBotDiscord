@@ -70,7 +70,7 @@ fs.readdirSync('./pasta/').forEach(dir => {
     });
 });
 
-//Fazer que so detecta o arquivo e os diretorios sem loops de fs.readdir com aliases
+//Fazer que so detecta o arquivo e os diretórios sem loops de fs.readdir com aliases
 
 fs.readdirSync('./pasta/').forEach(dir => {
     fs.readdir(`./pasta/${dir}`, (err, files) => {

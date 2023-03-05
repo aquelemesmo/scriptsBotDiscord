@@ -7,8 +7,8 @@
 //comando que nao precisa mencionar outro usuario para ver o saldo
 
 const Discord = require("discord.js")
-const { QuickDB } = require("quick.db")
-const db = new QuickDB()
+const SimplDB = require("simpl.db")
+const db = new SimplDB()
 
 module.exports.run = async (client, message, args) => {
     let coins = await db.fetch(`moedas.${message.guild.id}.${message.author.id}`) ?? 0 //ou seja, se nao tiver nada na db, ele vai ser 0
