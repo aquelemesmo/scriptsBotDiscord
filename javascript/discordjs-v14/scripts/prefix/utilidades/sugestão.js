@@ -1,5 +1,5 @@
 //Command sugestão
-//Exemplo: !sugestão <usuário>
+//Exemplo: !sugestão <sugestão>
 //Linguagem usada: js
 //Author: aquelemesmoojack#4306
 //Versão: Discord.JS v14
