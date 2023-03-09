@@ -1,0 +1,8 @@
+- Atualizações `discord.js-v14`:
+> Adicionado nova source `subcommands.js`
+
+- Atualizações `discord.js-v13`:
+> Criado novas 3 sources em `economia`
+
+- Atualizações `python`:
+> Criado nova source `subcommands.py`
