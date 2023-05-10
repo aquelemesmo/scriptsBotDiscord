@@ -1,4 +1,4 @@
-//Para poder usar esse script e fazer funcionar, tera que usar o evento guildMemberAdd e guildMemberRemove
+//Para poder usar esse script e fazer funcionar, tera que usar o eventos guildMemberAdd e guildMemberRemove
 //Linguagem usada: js
 //Author: aquelemesmoojack#4306
 //Versão: Discord.JS v14

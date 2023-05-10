@@ -1,4 +1,4 @@
-//Para poder usar esse script e fazer funcionar, tera que usar o evento interactionCreate
+//Para poder usar esse script e fazer funcionar, tera que usar o eventos interactionCreate
 //Linguagem usada: js
 //Versão Discord.JS v14
 //Author: aquelemesmoojack#4306

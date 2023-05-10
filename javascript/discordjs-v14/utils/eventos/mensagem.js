@@ -1,4 +1,4 @@
-//Para poder usar esse script e fazer funcionar, tera que usar o evento messageCreate
+//Para poder usar esse script e fazer funcionar, tera que usar o eventos messageCreate
 //Linguagem usada: js
 //Versão Discord.JS v14
 //Author: aquelemesmoojack#4306
