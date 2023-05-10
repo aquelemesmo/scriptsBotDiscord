@@ -1,4 +1,4 @@
-//Para poder usar esse script e fazer funcionar, tera que usar o evento messageDelete
+//Para poder usar esse script e fazer funcionar, tera que usar o eventos messageDelete
 //Linguagem usada: js
 //Author: aquelemesmoojack#4306
 //Versão: Discord.JS v13

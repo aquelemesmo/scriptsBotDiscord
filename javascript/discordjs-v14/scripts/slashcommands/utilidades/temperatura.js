@@ -28,12 +28,14 @@ module.exports = {
             const resultEmbed = new EmbedBuilder()
             .setColor("Cor")
             .setTitle("Previsão do tempo para " + result[0].location.name)
-            .addField("> Temperatura", `${result[0].current.temperature}°C`, true)
-            .addField("> Temp. máxima", `${result[0].forecast[0].high}°C`, true)
-            .addField("> Temp. mínima", `${result[0].forecast[0].low}°C`, true)
-            .addField("> Umidade", `${result[0].current.humidity}%`, true)
-            .addField("> Vento", `${result[0].current.winddisplay}`, true)
-            .addField("> Atualizado em", `${result[0].current.observationtime}`, true)
+            .addFields([
+                {name: "> Temperatura", value: `${result[0].current.temperature}°C`, inline: true},
+                {name: "> Temp. máxima", value: `${result[0].forecast[0].high}°C`, inline: true},
+                {name: "> Temp. mínima", value: `${result[0].forecast[0].low}°C`, inline: true},
+                {name: "> Umidade", value: `${result[0].current.humidity}%`, inline: true},
+                {name: "> Vento", value: `${result[0].current.winddisplay}`, inline: true},
+                {name: "> Atualizado em", value: `${result[0].current.observationtime}`, inline: true}
+            ])
             interaction.reply({embeds: [resultEmbed]})
         })
     }
