@@ -1,2 +1,0 @@
-- Criação do `discordjs-v14`:
-	- Criado nova source `avatar.js` em `comandos`

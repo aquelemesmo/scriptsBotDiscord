@@ -1,6 +1,0 @@
-- Atualização discordjs-v12:
-	- Atualização de `ban-direto, avatar-mention, help-simples, npm-search`
-	- Criado o arquivo `handler-fs` em `estruturas`
-- Atualização discordjs-v13:
-	- Atualização da categoria Moderação
-	- Criação do arquivo `petshop` (sugestão da comunidade)

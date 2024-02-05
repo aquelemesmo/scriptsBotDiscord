@@ -1,6 +1,0 @@
-- Atualização `discordjs-v13`:
-	- Renomeado `ban-direto.js - kick-direto.js` para `banir.js - expulsar.js`
-	- Criado o comando `timeout.js` em `moderação`
-	- Atualização em `estruturas`
-- Atualização `typescript`:
-	- Atualizado `ping.ts`

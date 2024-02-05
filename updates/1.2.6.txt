@@ -1,8 +1,0 @@
-- Criado `discordjs-v11`
-- Atualizações gerais em `discordjs-v12, discordjs-v13, discordjs-v14`
-- Atualizações em `python`:
-	- Criado source `ping.py`
-- Atualizações em `lua`:
-	- Criado source `Ping.lua`
-	- Criado novos eventos `ready.lua e messageCreate.lua`
-	- Criado novo Client `Client.lua`

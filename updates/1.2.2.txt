@@ -1,7 +1,0 @@
-- Criado a source typescript
-- Atualização no discordjs-v13:
-	- Corrigido bugs na categoria Economia, Moderação e Utilidades
-	- Criado a pasta `estruturas`
-	- Criado o arquivo `embed.js` em `estruturas`
-- Atualização no discordjs-v12:
-	- Corrigido bugs na categoria Moderação e Utilidades
