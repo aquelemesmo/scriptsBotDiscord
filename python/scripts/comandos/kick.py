@@ -1,7 +1,7 @@
 # Command kick
 # Exemplo: !kick @member
 # Linguagem usada: python 3.10
-# Author: aquelemesmoojack#4306
+# Author: aquelemesmoojack
 
 # Banimento de um membro, sem especificar o motivo
 

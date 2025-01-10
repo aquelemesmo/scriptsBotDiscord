@@ -1,7 +1,7 @@
 --Ban command
 --Exemplo: !ban <@member> <motivo>
 --Linguagem usada: lua
---Author: aquelemesmoojack#4306
+--Author: aquelemesmoojack
 
 function Ban:__init(data, parent)
     __init(self,data,parent)
