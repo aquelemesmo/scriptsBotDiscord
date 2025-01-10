@@ -1,7 +1,7 @@
 --Ping command
 --Exemplo: !ping
 --Linguagem usada: lua
---Author: aquelemesmoojack#4306
+--Author: aquelemesmoojack
 
 return {
     name = 'ping',

@@ -1,6 +1,6 @@
 // Event ready
 // Linguagem usada: java
-// Author: aquelemesmoojack#4306
+// Author: aquelemesmoojack
 
 import net.dv8tion.jda.api.events.ReadyEvent;
 

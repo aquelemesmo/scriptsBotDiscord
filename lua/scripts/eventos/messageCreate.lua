@@ -1,6 +1,6 @@
 --messageCreate event
 --Linguagem usada: lua
---Author: aquelemesmoojack#4306
+--Author: aquelemesmoojack
 
 client.on('messageCreate', function(msg)
     if (not string.startsWith(msg.content, settings.Prefix)) then
